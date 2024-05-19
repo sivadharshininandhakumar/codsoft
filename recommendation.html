@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recommendation System</title>
+</head>
+<body>
+<h1> Recommendation System</h1>
+<h2>Movie Recommendation System</h2>
+
+<p>Select your favorite movie genre:</p>
+<select id="genre">
+  <option value="action">Action</option>
+  <option value="comedy">Comedy</option>
+  <option value="drama">Drama</option>
+  <option value="horror">Horror</option>
+</select>
+
+<button onclick="recommendMovie()">Get Recommendation</button>
+
+<p>Your recommended movie is: <span id="recommendation"></span></p>
+
+<script>
+function recommendMovie() {
+  var genre = document.getElementById("genre").value;
+  var recommendation;
+
+  if (genre === "action") {
+    recommendation = "The Dark Knight";
+  } else if (genre === "comedy") {
+    recommendation = "Superbad";
+  } else if (genre === "drama") {
+    recommendation = "The Shawshank Redemption";
+  } else if (genre === "horror") {
+    recommendation = "The Conjuring";
+  }
+
+  document.getElementById("recommendation").textContent = recommendation;
+}
+</script>
+
+</body>
+</html>
